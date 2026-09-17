@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lire un tableau de garanties : ce que veulent dire 100 %, 200 % et 300 % BR</title>
+<meta name="description" content="Comment lire un tableau de garanties de mutuelle : base de remboursement, ticket modérateur, dépassements d'honoraires, forfaits en euros, plafonds annuels. La méthode ligne par ligne, avec les calculs sur des actes courants.">
+<link rel="canonical" href="https://analytics-ds.github.io/comparmutuelle/garanties-remboursements/lire-tableau-garanties/">
+<meta property="og:site_name" content="Comparmutuelle">
+<meta property="og:title" content="Lire un tableau de garanties : ce que veulent dire 100 %, 200 % et 300 % BR">
+<meta property="og:description" content="Comment lire un tableau de garanties de mutuelle : base de remboursement, ticket modérateur, dépassements d'honoraires, forfaits en euros, plafonds annuels. La méthode ligne par ligne, avec les calculs sur des actes courants.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0D1A14">
+<link rel="stylesheet" href="../../assets/css/site.css?v=1">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Lire un tableau de garanties : ce que veulent dire 100 %, 200 % et 300 % BR", "description": "Comment lire un tableau de garanties de mutuelle : base de remboursement, ticket modérateur, dépassements d'honoraires, forfaits en euros, plafonds annuels. La méthode ligne par ligne, avec les calculs sur des actes courants.", "datePublished": "2026-09-01", "dateModified": "2026-09-01", "inLanguage": "fr-FR", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://analytics-ds.github.io/comparmutuelle/garanties-remboursements/lire-tableau-garanties/"}, "image": "https://analytics-ds.github.io/comparmutuelle/assets/img/gar-2.jpg", "author": {"@type": "Organization", "name": "Comparmutuelle", "url": "https://analytics-ds.github.io/comparmutuelle"}, "publisher": {"@type": "Organization", "name": "Comparmutuelle", "url": "https://analytics-ds.github.io/comparmutuelle", "logo": {"@type": "ImageObject", "url": "https://analytics-ds.github.io/comparmutuelle/assets/logo/logo.svg"}}, "articleSection": "Garanties et remboursements"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Que veut dire 100 % BR ?", "acceptedAnswer": {"@type": "Answer", "text": "Que la Sécurité sociale et la mutuelle remboursent ensemble la base de remboursement de l'acte, et rien au-delà. La mutuelle prend le ticket modérateur, les dépassements d'honoraires restent à votre charge."}}, {"@type": "Question", "name": "Une mutuelle à 200 % rembourse-t-elle deux fois le prix ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Elle rembourse jusqu'à deux fois la base de remboursement de l'Assurance Maladie, Sécurité sociale comprise. Sur une consultation à base 30 €, le remboursement total est plafonné à 60 €, quel que soit le prix facturé."}}, {"@type": "Question", "name": "Qu'est-ce que le ticket modérateur ?", "acceptedAnswer": {"@type": "Answer", "text": "La part de la base de remboursement que l'Assurance Maladie ne prend pas en charge, en général 30 % sur une consultation et 40 % sur une prothèse dentaire. C'est le premier niveau de remboursement de toute mutuelle."}}, {"@type": "Question", "name": "Pourquoi le remboursement est-il plus faible chez un médecin hors OPTAM ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce que les contrats responsables plafonnent la prise en charge des dépassements d'honoraires des médecins non signataires de l'OPTAM à 100 % de la base. Un contrat à 300 % ne couvre que 200 % chez ces médecins."}}, {"@type": "Question", "name": "Un forfait optique de 350 € s'applique-t-il chaque année ?", "acceptedAnswer": {"@type": "Answer", "text": "Rarement. Les contrats responsables imposent un délai de deux ans entre deux équipements optiques, sauf évolution de la vue. Le forfait est donc le plus souvent par équipement tous les deux ans, et la monture est plafonnée à 100 €."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Lire un tableau de garanties : ce que veulent dire 100 %, 200 % et 300 % BR", "itemListOrder": "https://schema.org/ItemListOrderDescending", "numberOfItems": 5, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Consultation spécialiste secteur 2, OPTAM", "description": "Note 60 €/10. 0 €."}, {"@type": "ListItem", "position": 2, "name": "Consultation spécialiste secteur 2, hors OPTAM", "description": "Note 80 €/10. 11 €."}, {"@type": "ListItem", "position": 3, "name": "Couronne céramique sur molaire", "description": "Note 550 €/10. 227,50 €."}, {"@type": "ListItem", "position": 4, "name": "Séance de kinésithérapie", "description": "Note 25 €/10. 0 €."}, {"@type": "ListItem", "position": 5, "name": "Journée d'hospitalisation, honoraires chirurgien", "description": "Note 1 200 €/10. 0 €."}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://analytics-ds.github.io/comparmutuelle"}, {"@type": "ListItem", "position": 2, "name": "Garanties et remboursements", "item": "https://analytics-ds.github.io/comparmutuelle/garanties-remboursements/"}, {"@type": "ListItem", "position": 3, "name": "Lire un tableau de garanties sans se tromper"}]}</script>
+<meta property="og:type" content="article">
+</head>
+<body>
+
+<header class="scrolled">
+  <div class="wrap nav">
+    <a class="logo" href="../../" aria-label="Comparmutuelle, accueil"><img class="l-light" src="../../assets/logo/logo-light.svg" alt="Comparmutuelle" width="620" height="133"><img class="l-dark" src="../../assets/logo/logo.svg" alt="" aria-hidden="true" width="620" height="133"></a>
+    <ul class="menu">
+      <li><a href="../../mutuelle-senior/">Senior</a></li>
+      <li><a href="../../garanties-remboursements/" style="text-decoration:underline;text-underline-offset:6px">Garanties</a></li>
+      <li><a href="../../mutuelle-pro/">Par métier</a></li>
+      <li><a href="../../prix-et-aides/">Prix</a></li>
+      <li><a href="../../droits-et-demarches/">Démarches</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="iconbtn" href="../../#outil" aria-label="Rechercher"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></a>
+      <a class="btn btn-dark" href="../../#outil">Comparer 2 mutuelles</a>
+      <button class="burger" aria-label="Menu"><svg width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="#111" stroke-width="1.7"><path d="M0 1h22M0 7h22M0 13h22"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<section class="art-hero">
+  <img src="../../assets/img/gar-2.jpg" alt="Une échelle de lecture d'opticien vue à travers des lunettes" width="1300" height="731" fetchpriority="high">
+</section>
+
+<section class="art-head">
+  <div class="wrap">
+    <div class="art-card">
+      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="../../">Accueil</a><i></i><a href="../../garanties-remboursements/">Garanties et remboursements</a><i></i><span>Lire un tableau de garanties sans se tromper</span></nav>
+      <h1>Lire un tableau de garanties sans se tromper</h1>
+      <p class="art-lead">Un tableau de garanties tient sur deux pages et se lit en dix minutes, à condition de connaître quatre notions : la base de remboursement, le ticket modérateur, le dépassement d'honoraires et le forfait. Nous les expliquons avec les vrais chiffres de l'Assurance Maladie, puis nous les appliquons ligne par ligne.</p>
+      <div class="art-meta">
+        <span class="art-author"><span>C</span><b>La rédaction Comparmutuelle</b></span>
+        <span>Mis à jour le <b>septembre 2026</b></span>
+        <span><b>8 min</b> de lecture</span>
+        <span><b>4 notions</b> pour tout comprendre</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="art-body">
+  <div class="wrap art-cols">
+    <article class="prose">
+
+      <div class="brief">
+        <h2>En bref</h2>
+        <p class="answer"><b>100 % BR</b> signifie que Sécurité sociale et mutuelle réunies remboursent la base de remboursement, et rien au-delà : les dépassements d'honoraires restent à votre charge. <b>200 % BR</b> couvre un dépassement égal à la base, <b>300 % BR</b> deux fois la base. Sur une consultation de spécialiste à 60 € dont la base est 30 €, il reste 30 € à payer en 100 %, 0 € en 200 %. Les forfaits en euros, eux, se lisent tels quels.</p>
+        <ul><li>La base de remboursement est un tarif fixé par l'Assurance Maladie pour chaque acte, souvent très inférieur au prix réellement payé</li><li>100 % BR ne veut pas dire remboursé à 100 % : cela veut dire remboursé jusqu'à la base, sans dépassement</li><li>Les pourcentages incluent la part de la Sécurité sociale : une mutuelle « à 200 % » verse 130 % sur une consultation, la Sécurité sociale 70 %</li><li>Un forfait en euros se compare directement, mais il faut vérifier s'il est annuel, par acte ou par équipement, et s'il inclut la part Sécurité sociale</li></ul>
+      </div>
+
+      <details class="toc">
+        <summary>Sommaire</summary>
+        <ol><li><a href="#base">La base de remboursement, point de départ de tout</a></li><li><a href="#pourcentages">Ce que veulent dire 100 %, 200 % et 300 %</a></li><li><a href="#forfaits">Les forfaits en euros et leurs conditions</a></li></ol>
+      </details>
+
+      <h2 id="base">La base de remboursement, point de départ de tout</h2><p>Pour chaque acte médical, l'Assurance Maladie fixe un tarif de référence, la base de remboursement, ou BR. Elle rembourse un pourcentage de cette base, en général 70 % pour une consultation et 60 % pour une prothèse dentaire. Le reste de la base s'appelle le ticket modérateur, et c'est la première chose qu'une mutuelle rembourse. Tout ce que le professionnel facture au-dessus de la base est un dépassement d'honoraires, et c'est là que les contrats se différencient.</p><p>Le piège est que la base est souvent très inférieure au prix réel. Une couronne est facturée 450 à 700 € pour une base de 107,50 €. Une consultation d'ophtalmologue en secteur 2 coûte 60 à 90 € pour une base de 30 €. Un pourcentage de la base peut donc représenter très peu d'argent.</p><h2 id="pourcentages">Ce que veulent dire 100 %, 200 % et 300 %</h2><p>Le pourcentage indiqué dans un tableau de garanties est presque toujours exprimé Sécurité sociale comprise. « 200 % BR » signifie que le total remboursé par la Sécurité sociale et la mutuelle atteint deux fois la base. Sur une consultation à base 30 € remboursée 70 % par la Sécurité sociale, la mutuelle verse la différence jusqu'à 60 €, soit 39 €. Si le médecin facture 60 €, il ne reste rien à payer. S'il facture 80 €, il reste 20 €.</p><div class="table-wrap"><div class="table-scroll"><table><thead><tr><th>Acte</th><th>Prix payé</th><th>Base de remboursement</th><th>Reste à charge à 100 % BR</th><th>Reste à charge à 200 % BR</th><th>Reste à charge à 300 % BR</th></tr></thead><tbody><tr><td class="brand">Consultation spécialiste secteur 2, OPTAM</td><td>60 €</td><td>30 €</td><td>30 €</td><td>0 €</td><td>0 €</td></tr><tr><td class="brand">Consultation spécialiste secteur 2, hors OPTAM</td><td>80 €</td><td>23 €</td><td>57 €</td><td>34 €</td><td>11 €</td></tr><tr><td class="brand">Couronne céramique sur molaire<span class='badge'>Notre choix</span></td><td>550 €</td><td>107,50 €</td><td>442,50 €</td><td>335 €</td><td>227,50 €</td></tr><tr><td class="brand">Séance de kinésithérapie</td><td>25 €</td><td>16,13 €</td><td>8,87 €</td><td>0 €</td><td>0 €</td></tr><tr><td class="brand">Journée d'hospitalisation, honoraires chirurgien</td><td>1 200 €</td><td>420 €</td><td>780 €</td><td>360 €</td><td>0 €</td></tr></tbody></table></div><div class="table-note">Bases de remboursement de l'Assurance Maladie. Les contrats responsables plafonnent la prise en charge des dépassements des médecins hors OPTAM à 100 % BR. Hors forfait journalier et chambre particulière.</div></div><figure><img src="../../assets/img/in-gar-2.jpg" alt="Un médecin prend la tension d'une patiente" width="1200" height="700" loading="lazy"><figcaption>Chez un spécialiste hors OPTAM, un contrat responsable ne peut pas rembourser plus de 100 % BR de dépassement, quel que soit le niveau de garantie affiché.</figcaption></figure><p>La ligne des médecins hors OPTAM mérite une lecture attentive. Les contrats responsables, c'est-à-dire la quasi-totalité des mutuelles, ne peuvent pas rembourser leurs dépassements au-delà de 100 % de la base. Un contrat « 300 % » ne couvre donc que 200 % chez un médecin qui n'a pas signé l'option de pratique tarifaire maîtrisée. Le tableau de garanties l'indique, en petit, sur deux lignes séparées.</p><h2 id="forfaits">Les forfaits en euros et leurs conditions</h2><p>En optique, en audiologie et souvent en dentaire, les mutuelles remplacent le pourcentage par un forfait en euros. Il se lit plus facilement, à trois conditions.</p><ul><li><b>La période</b> : un forfait optique de 350 € tous les deux ans ne vaut pas un forfait de 350 € par an ; les contrats responsables imposent deux ans entre deux équipements optiques, sauf changement de vue</li><li><b>L'unité</b> : par acte, par équipement, par oreille ou par an ; un forfait dentaire de 400 € « par an » plafonne deux couronnes, un forfait « par prothèse » n'en plafonne aucune</li><li><b>L'inclusion de la Sécurité sociale</b> : certains forfaits s'entendent Sécurité sociale comprise, d'autres en plus ; la différence vaut 75 € sur une couronne et 240 € sur une aide auditive</li></ul><blockquote><p>Un tableau de garanties se lit avec un devis à côté. Sans devis, on compare des pourcentages ; avec, on compare des euros.</p></blockquote>
+
+      <div class="verdict-box">
+        <h2>Notre verdict</h2>
+        <p>Un tableau de garanties se lit en quatre questions : quelle est la base de l'acte, quel pourcentage est couvert Sécurité sociale comprise, le médecin est-il OPTAM, et le forfait est-il par acte ou par an. Avec un devis en main, dix minutes suffisent.</p><p>Les mutuelles bien notées de nos comparatifs sont celles dont le tableau répond à ces questions sans renvoi ni astérisque. <b>Mutuelle Prévifrance</b> et <b>MGEN</b> publient les leurs en euros sur les actes courants, ce qui évite le calcul.</p>
+      </div>
+
+      <h2 id="faq">Questions fréquentes</h2>
+      <div class="faq" style="padding:0"><details open><summary>Que veut dire 100 % BR ?</summary><p>Que la Sécurité sociale et la mutuelle remboursent ensemble la base de remboursement de l'acte, et rien au-delà. La mutuelle prend le ticket modérateur, les dépassements d'honoraires restent à votre charge.</p></details><details><summary>Une mutuelle à 200 % rembourse-t-elle deux fois le prix ?</summary><p>Non. Elle rembourse jusqu'à deux fois la base de remboursement de l'Assurance Maladie, Sécurité sociale comprise. Sur une consultation à base 30 €, le remboursement total est plafonné à 60 €, quel que soit le prix facturé.</p></details><details><summary>Qu'est-ce que le ticket modérateur ?</summary><p>La part de la base de remboursement que l'Assurance Maladie ne prend pas en charge, en général 30 % sur une consultation et 40 % sur une prothèse dentaire. C'est le premier niveau de remboursement de toute mutuelle.</p></details><details><summary>Pourquoi le remboursement est-il plus faible chez un médecin hors OPTAM ?</summary><p>Parce que les contrats responsables plafonnent la prise en charge des dépassements d'honoraires des médecins non signataires de l'OPTAM à 100 % de la base. Un contrat à 300 % ne couvre que 200 % chez ces médecins.</p></details><details><summary>Un forfait optique de 350 € s'applique-t-il chaque année ?</summary><p>Rarement. Les contrats responsables imposent un délai de deux ans entre deux équipements optiques, sauf évolution de la vue. Le forfait est donc le plus souvent par équipement tous les deux ans, et la monture est plafonnée à 100 €.</p></details></div>
+
+      <div class="method-box">
+        <h2>Notre méthode</h2>
+        <p>Ce comparatif repose sur des documents publics, vérifiables un par un.</p>
+        <ul>
+          <li>Les garanties sont relevées dans le tableau de garanties et les conditions générales de chaque contrat, pas sur la page commerciale</li>
+          <li>Chaque pourcentage de base de remboursement est converti en euros de reste à charge sur des actes courants, après remboursement de l'Assurance Maladie</li>
+          <li>Les tarifs sont relevés pour un profil de référence, une personne seule ou un couple de 62 et 64 ans, en formule intermédiaire, dans un même département</li>
+          <li>Les conditions d'entrée sont lues dans les conditions générales : questionnaire de santé, délai de carence, âge limite de souscription</li>
+          <li>Le service est vérifié sur le terrain : présence d'une agence, conseiller nommé, tiers payant chez les opticiens et audioprothésistes, délai de remboursement constaté</li>
+          <li>Les notes publiées sont un relevé de démonstration : elles illustrent la méthode et se remplacent par le relevé réel avant toute publication</li>
+        </ul>
+      </div>
+
+      <div class="disclosure"><b>Information, pas conseil.</b> Les notes et les montants publiés ici sont un relevé de démonstration établi sur des tableaux de garanties, en formule intermédiaire, pour un profil de référence. Ils ne constituent pas une recommandation personnalisée. Les remboursements réels dépendent de la formule, du département, du professionnel de santé et du respect du parcours de soins.</div>
+    </article>
+
+    <aside class="aside">
+      <div class="aside-card">
+        <h3>Notre choix</h3>
+        <div class="aside-win"><img src="../../assets/logos/previfrance.svg" alt="Mutuelle Prévifrance" width="120" height="33"><b>9,2</b></div>
+        <p>La mutuelle la mieux notée de nos comparatifs. Sans questionnaire ni carence, agences en Occitanie.</p>
+        <a class="btn btn-dark" href="../../#outil" style="width:100%;justify-content:center">Comparer 2 mutuelles</a>
+      </div>
+      <div class="aside-card">
+        <h3>Dans ce dossier</h3>
+        <div class="aside-links"><a href="#base">La base de remboursement, point de départ de tout</a><a href="#pourcentages">Ce que veulent dire 100 %, 200 % et 300 %</a><a href="#forfaits">Les forfaits en euros et leurs conditions</a><a href="#faq">Questions fréquentes</a></div>
+      </div>
+      <div class="aside-card dark">
+        <h3>Reste à charge</h3>
+        <p>Prix de l'acte, base de remboursement et niveau de garantie : ce qu'il vous reste à payer.</p>
+        <a class="btn btn-accent" href="../../#simulateur" style="width:100%;justify-content:center">Lancer le calcul</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="related">
+  <div class="wrap">
+    <div class="section-head"><h2>À lire ensuite</h2><a class="btn btn-ghost" href="../../garanties-remboursements/">Tous les dossiers garanties et remboursements</a></div>
+    <div class="grid3"><a class="post big" href="../../garanties-remboursements/mutuelle-dentaire-optique-audition/"><img src="../../assets/img/gar-1.jpg" alt="" width="800" height="560" loading="lazy"><div class="post-body"><span class="eyebrow">Remboursements</span><h3>Mutuelle qui rembourse bien le dentaire, l'optique et l'audition : le comparatif en euros</h3></div></a><a class="post big" href="../../mutuelle-senior/meilleure-mutuelle-senior/"><img src="../../assets/img/une.jpg" alt="" width="800" height="560" loading="lazy"><div class="post-body"><span class="eyebrow">Classement</span><h3>Meilleure mutuelle senior : le comparatif de 11 contrats après 60 ans</h3></div></a><a class="post big" href="../../prix-et-aides/prix-mutuelle-senior/"><img src="../../assets/img/prix-1.jpg" alt="" width="800" height="560" loading="lazy"><div class="post-body"><span class="eyebrow">Prix</span><h3>Prix d'une mutuelle senior à 60, 65 et 70 ans : les tarifs relevés contrat par contrat</h3></div></a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand"><a class="logo" href="../../" aria-label="Comparmutuelle, accueil"><img src="../../assets/logo/logo.svg" alt="Comparmutuelle" width="620" height="133" loading="lazy"></a><p>Les comparatifs de la mutuelle santé, de la retraite à la fonction publique. Nous relevons les garanties dans le tableau contractuel, nous les convertissons en euros de reste à charge et nous publions la méthode.</p></div>
+      <div><h4>Comparatifs</h4><ul><li><a href="../../mutuelle-senior/">Mutuelle senior</a></li><li><a href="../../garanties-remboursements/">Garanties et remboursements</a></li><li><a href="../../mutuelle-pro/">Mutuelle par métier</a></li><li><a href="../../prix-et-aides/">Prix et économies</a></li><li><a href="../../droits-et-demarches/">Droits et démarches</a></li></ul></div>
+      <div><h4>Outils</h4><ul><li><a href="../../#outil">Comparer deux mutuelles</a></li><li><a href="../../#simulateur">Calculer un reste à charge</a></li><li><a href="../../#classement">Le classement du mois</a></li><li><a href="../../#methode">Notre méthode</a></li></ul></div>
+      <div><h4>À propos</h4><ul><li><a href="../../#methode">Comment nous comparons</a></li><li><a href="../../a-propos/">Qui sommes-nous</a></li><li><a href="../../a-propos/#corrections">Signaler une erreur</a></li><li><a href="../../mentions-legales/">Mentions légales</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Comparmutuelle. Comparatifs de mutuelles santé, senior, fonction publique et indépendants.</span><span>Information non contractuelle, relevé de démonstration, ne constitue pas un conseil personnalisé.</span></div>
+  </div>
+</footer>
+
+<script src="../../assets/js/site.js?v=1"></script>
+</body>
+</html>
